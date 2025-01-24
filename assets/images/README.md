@@ -1,6 +1,6 @@
 Bu klasörde aşağıdaki görseller bulunmalıdır:
 
-1. logo.png (200x40px)
+1. bestofferten_logo.png (200x40px)
    - BestOfferten logosu
    - Şeffaf arka plan
    - Ana renk: #00AFFF
