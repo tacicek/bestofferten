@@ -1,0 +1,227 @@
+:root {
+    --primary-color: #00AFFF;
+}
+
+/* Navbar Styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background-image: url('assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-form {
+    margin-top: 2rem;
+}
+
+.hero-form .form-control {
+    height: 50px;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    height: 50px;
+    padding: 0 30px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #0095dd;
+    border-color: #0095dd;
+}
+
+/* Page Header Styles */
+.page-header {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: 76px;
+}
+
+.page-header .hero-overlay {
+    display: flex;
+    align-items: center;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-header .lead {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .hero h1, .page-header h1 {
+        font-size: 2.8rem;
+    }
+    .page-header .lead {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+    .nav-link {
+        padding: 0.5rem 0;
+    }
+    .hero h1, .page-header h1 {
+        font-size: 2.5rem;
+    }
+    .hero-form .col-md-8 {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 100vh;
+    }
+    .hero h1, .page-header h1 {
+        font-size: 2rem;
+    }
+    .page-header .lead {
+        font-size: 1.1rem;
+    }
+    .hero-form .input-group {
+        flex-direction: column;
+    }
+    .hero-form .form-control {
+        border-radius: 4px;
+        margin-bottom: 1rem;
+    }
+    .hero-form .btn-primary {
+        border-radius: 4px;
+        width: 100%;
+    }
+    .page-header {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1, .page-header h1 {
+        font-size: 1.8rem;
+    }
+    .page-header .lead {
+        font-size: 1rem;
+    }
+    .hero-form .col-md-8 {
+        width: 100%;
+    }
+    .navbar-brand img {
+        height: 30px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .nav-link:hover {
+        color: inherit !important;
+    }
+    .btn-primary:hover {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar {
+        position: static;
+        box-shadow: none;
+    }
+    .hero-overlay {
+        background: none;
+    }
+    .hero h1, .page-header h1, .page-header .lead {
+        color: #000 !important;
+        text-shadow: none;
+    }
+    .hero-form, .btn-primary {
+        display: none;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .navbar {
+        background-color: #1a1a1a !important;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: #fff !important;
+    }
+    .navbar-light .navbar-toggler {
+        background-color: #fff;
+    }
+    .hero-form .form-control {
+        background-color: #2a2a2a;
+        border-color: #444;
+        color: #fff;
+    }
+    .hero-form .form-control::placeholder {
+        color: #aaa;
+    }
+}
+
+/* High Contrast Mode */
+@media (forced-colors: active) {
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    .btn-primary {
+        border: 2px solid ButtonText;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+} 
